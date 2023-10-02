@@ -1,0 +1,130 @@
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --pink: hsl(350, 100%, 67%);
+  --dark-slate-gray: hsl(235, 18%, 26%);
+  --charcoal-gray: hsl(231, 7%, 60%);
+  --gray: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Roboto-400";
+  src: url("../fonts/Roboto-400.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-700";
+  src: url("../fonts/Roboto-700.ttf");
+}
+
+.container {
+  width: 350px;
+  padding: 50px;
+  padding-top: 40px;
+  border-radius: 20px;
+  background-color: white;
+
+  h1 {
+    font-family: "Roboto-700";
+    font-size: 52px;
+    color: var(--dark-slate-gray);
+    margin-top: 30px;
+  }
+
+  p {
+    font-family: "Roboto-400";
+    font-size: 14px;
+    color: var(--dark-slate-gray);
+    margin-top: -10px;
+  }
+
+  span {
+    font-family: "Roboto-700";
+  }
+
+  button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--dark-slate-gray);
+    color: white;
+    font-family: "Roboto-700";
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  button:active {
+    background: linear-gradient(to right, var(--pink) 0 30%, var(--tomato) 70% 100%);
+  }
+
+  button:active .buttonLeftShadow {
+    box-shadow: 0 5px 20px -5px var(--pink);
+  }
+
+  button:active .buttonRightShadow {
+    box-shadow: 0 5px 20px -5px var(--tomato);
+  }
+}
+
+.buttonLeftShadow {
+  width: 185px;
+  height: 47px;
+  margin-left: -120px;
+  margin-top: -16px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.buttonRightShadow {
+  width: 185px;
+  height: 47px;
+  margin-left: 45px;
+  margin-top: -16px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+
+    img {
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 250px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .buttonLeftShadow {
+    margin-left: -110px;
+  }
+
+  .buttonRightShadow {
+    margin-left: 35px
+  }
+}
